@@ -1,0 +1,30 @@
+.skills_container{
+    height: 100%;
+    width: 100%;
+    align-items:center;
+    text-align: center;
+    padding-top: 5rem;
+
+    
+    &.light-mode{
+        background-color: #fff;
+        color: #000;
+    }
+    .skill_items{
+        display: grid;
+        grid-template-columns: 10rem 10rem 10rem 10rem;
+        align-items: center;
+        gap: 1rem;
+        justify-content: center;
+        margin: 1rem;
+        padding: 1rem;
+        text-align: center;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+

@@ -1,0 +1,138 @@
+.contact{
+    position: relative;
+    height: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: outfit, sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0 8rem;
+
+
+    &.light-mode{
+        background-color: #ffffff;
+        color: #000;
+
+        .backdrop_img{
+            opacity: 0;
+
+        }
+
+        Form{
+            background-color: #ffffff96;
+            color: #000;
+
+        }
+
+        Input{
+            border: 2px solid #000;
+        }
+
+        textarea{
+            border: 2px solid #000;
+            width: 100%;
+        }
+    }
+
+    .backdrop_img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.3;
+        top: 0;
+        bottom: 0;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .contact_img{
+        height: 23rem;
+        width: 24rem;
+        border-radius: 10px;
+        position: relative;
+        margin-bottom: 1rem;
+        z-index: 3;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    Form{
+        margin: 0 auto;
+        width: 32rem;
+        padding: 1rem 1rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 24px;
+        z-index: 3;
+
+        Text{
+            display: flex;
+            justify-content: start;
+            align-content: center;
+        }
+
+        Input{
+            width: 100%;
+            height: 2rem;
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: #000000;
+            font-family: outfit, sans-serif;
+        }
+
+        textarea{
+            width: 100%;
+            color: #000000;
+            height: 3rem;
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: none;
+            padding: 0.5rem;
+            font-size: 1rem;
+            font-family: outfit, sans-serif;
+        }
+        Button{
+            height: 2rem;
+            border-radius: 25px;
+            border: none;
+            display: flex;
+            max-width: 8rem;
+            justify-content: center;
+            align-items: center;
+            background: #000000;
+            padding: 1.5rem 2rem;
+            font-size: 1rem;
+            bottom: 0;
+            font-family: outfit, sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+
+            &:hover{
+                background-color:rgb(190, 110, 255);
+            }
+        
+        }
+    }
+        
+        
+    
+    
+    
+}
