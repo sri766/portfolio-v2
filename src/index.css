@@ -1,9 +1,13 @@
+@font-face {
+  font-family: "Outfit";
+  src: url(/assets/Outfit.ttf);
+}
 :root {
-  font-family: 'outfit', sans-serif;
   line-height: 1.5;
   font-weight: 400;
   overflow-x: hidden;
   color-scheme: light dark;
+  font-family: "Outfit", sans-serif;
   color: rgba(255, 255, 255, 0.87);
   background-color: rgb(5, 0, 48);
 
@@ -13,6 +17,7 @@
   
 
 }
+
 
 
 body {

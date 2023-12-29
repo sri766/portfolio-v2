@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "Stay Wild";
+    src: url(/assets/stay-wild.otf) format("truetype");
+}
+
+
+
 .home_container{
     display: flex;
     padding-top: 3rem 0 3rem 0;
@@ -6,7 +13,6 @@
     justify-content: center;
     height: 100vh;
     position: relative;
-
     width: 100%;
 
     .backdrop_img{
@@ -28,8 +34,10 @@
     .home_title{
         font-size: larger;
         font-weight: 1000;
-        font-family: 'stay wild',sans-serif;
+        font-family: "Stay Wild",sans-serif ;
     }
+
+    
 
     .socials{
         display: flex;
