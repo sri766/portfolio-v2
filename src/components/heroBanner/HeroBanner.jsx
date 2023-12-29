@@ -16,7 +16,7 @@ const HeroBanner = ({mode}) => {
   return (
     <div className={`home_container ${mode === 'light' ? 'light-mode' : ''}`}>
         <div className="home_img">
-          <img src="./src/assets/srisanth.jpg" alt="srisanth" />
+          <img src="./assets/srisanth.jpg" alt="srisanth" />
         </div>
         <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
         <Type mode={mode}/>
@@ -27,7 +27,7 @@ const HeroBanner = ({mode}) => {
 
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
           <img src={
-            mode === 'light' ? './src/assets/bg-light.svg' : './src/assets/bg.jpg'
+            mode === 'light' ? './assets/bg-light.svg' : './assets/bg.jpg'
           } alt='bg'/>
         </div>
         <div className="socials">

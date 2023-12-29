@@ -7,21 +7,21 @@ import './style.scss'
 const Skills = ({mode}) => {
 
   const Skills = [
-    {name:'HTML',icon:'./src/assets/html.png'},
-    {name:'CSS',icon:'./src/assets/css.png'},
-    {name:'Javascript',icon:'./src/assets/javascript.png'},
-    {name:'React',icon:'./src/assets/react.svg'},
-    {name:'Redux',icon:'./src/assets/redux.png'},
-    {name:'Node',icon:'./src/assets/node.png'},
-    {name:'Sass',icon:'./src/assets/sass.png'},
-    {name:'Git',icon:'./src/assets/git.png'},
-    {name:'Python',icon:'./src/assets/python.png'},
-    {name:'Docker',icon:'./src/assets/docker.png'},
-    {name:'Kubernetes',icon:'./src/assets/kubernetes.png'},
-    {name:'Jeninks',icon:'./src/assets/jenkins.png'},
-    {name:'AWS',icon:'./src/assets/aws.svg'},
-    {name:'Figma',icon:'./src/assets/figma.png'},
-    {name:'C++',icon:'./src/assets/cpp.png'},
+    {name:'HTML',icon:'./assets/html.png'},
+    {name:'CSS',icon:'./assets/css.png'},
+    {name:'Javascript',icon:'./assets/javascript.png'},
+    {name:'React',icon:'./assets/react.svg'},
+    {name:'Redux',icon:'./assets/redux.png'},
+    {name:'Node',icon:'./assets/node.png'},
+    {name:'Sass',icon:'./assets/sass.png'},
+    {name:'Git',icon:'./assets/git.png'},
+    {name:'Python',icon:'./assets/python.png'},
+    {name:'Docker',icon:'./assets/docker.png'},
+    {name:'Kubernetes',icon:'./assets/kubernetes.png'},
+    {name:'Jeninks',icon:'./assets/jenkins.png'},
+    {name:'AWS',icon:'./assets/aws.svg'},
+    {name:'Figma',icon:'./assets/figma.png'},
+    {name:'C++',icon:'./assets/cpp.png'},
 
   ]
   

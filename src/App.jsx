@@ -7,7 +7,7 @@ import About from './pages/about/About'
 import Contact from './pages/contact/Contact'
 import Skills from './pages/skills/Skills'
 import Projects from './pages/projects/Projects'
-
+import Blog from './pages/blog/Blog'
 
 //components
 import Header from './components/header/Header'
@@ -16,7 +16,7 @@ import { projects } from './components/data/Data'
 
 const App =() =>{
   const [mode,setMode] = useState('dark');
-
+  
   const toggleMode = () => {
     setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
   };
@@ -30,6 +30,7 @@ const App =() =>{
         <Route path="/contact" element={<Contact mode={mode}/>} />
         <Route path="/skills" element={<Skills mode={mode}/>} />
         <Route path="/projects" element={<Projects mode={mode} projects={projects}/>} />
+        <Route path="/blog" element={<Blog mode={mode}/>} />
       </Routes>
       <Footer mode={mode}/>
     </BrowserRouter>
