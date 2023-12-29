@@ -1,0 +1,11 @@
+.home_subtitle{
+    color: #505050;
+    font-size: 1rem;
+    z-index: 4;
+    font-weight: 800;
+    font-family: lemon melon, sans-serif;
+
+    &.light-mode{
+        color: #000000;
+    }
+}

@@ -25,6 +25,7 @@ const Header = ({mode,toggleMode}) => {
       <ul className='content-list'>
         <li className='content' onClick={()=>navigate('/')}>Home</li>
         <li className='content' onClick={()=>navigate('/about')}>About</li>
+        <li className='content' onClick={()=>navigate('/Blog')}>Blog</li>
         <li className='content' onClick={()=>navigate('/skills')}>Skills</li>
         <li className='content' onClick={()=>navigate('/projects')}>Projects</li>
         <li className='content' onClick={()=>navigate('/contact')}>Contact</li>

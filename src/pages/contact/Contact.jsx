@@ -12,8 +12,14 @@ const Contact = ({mode}) => {
             mode === 'light' ? './src/assets/bg-light.svg' : './src/assets/bg-about.jpg'
           } alt='bg'/>
         </div>
-          <div className='contact_img'>
-            <img src="./src/assets/illustration.jpg" alt="illustration" />
+          <div className="contact_img">
+            {
+              mode === 'light' ? (
+                <img src="./src/assets/programmer.gif" alt="illustration" />
+              ) : (
+                <img src="./src/assets/illustration.jpg" alt="illustration" />
+              )
+            }
           </div>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicName">
@@ -35,14 +41,14 @@ const Contact = ({mode}) => {
                     Write your post:
                     <textarea
                       name="postContent"
-                      defaultValue="Post you Message here!"
+                      defaultValue="Post your Message here!"
                       rows={4}
                       cols={40}
                     />
                   </Form.Label>
                 </Form.Group>
                 
-                <Button variant="primary" type="submit">
+                <Button type="submit">
                   Submit
               </Button>
           </Form>

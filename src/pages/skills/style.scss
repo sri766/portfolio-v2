@@ -1,10 +1,12 @@
 .skills_container{
     height: 100%;
     width: 100%;
+    position: relative;
     align-items:center;
     text-align: center;
-    padding-top: 5rem;
-
+    color: #ffffff;
+    padding: 3rem 0 3rem 0;
+    background-color: #070028;
     
     &.light-mode{
         background-color: #fff;
@@ -12,9 +14,9 @@
     }
     .skill_items{
         display: grid;
-        grid-template-columns: 10rem 10rem 10rem 10rem;
+        grid-template-columns: repeat(5,4rem);
         align-items: center;
-        gap: 1rem;
+        gap: 5rem;
         justify-content: center;
         margin: 1rem;
         padding: 1rem;

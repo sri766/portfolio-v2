@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { IoDocumentTextOutline,IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
-
+import Type from '../type/Type';
 const HeroBanner = ({mode}) => {
 
 
@@ -19,8 +19,12 @@ const HeroBanner = ({mode}) => {
           <img src="./src/assets/srisanth.jpg" alt="srisanth" />
         </div>
         <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
-        <h3 className='home_subtitle'>A DevOps Enthusiast and MERN Stack Developer</h3>
-        <button className='home_button'>{<IoDocumentTextOutline />}Resume</button>
+        <Type mode={mode}/>
+
+        <a className='home_button' target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/10i-mq64Kdnj9YHj20JsYlvKMuTBFKamM/view?usp=sharing' >
+          {<IoDocumentTextOutline />}Resume
+        </a>
+
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
           <img src={
             mode === 'light' ? './src/assets/bg-light.svg' : './src/assets/bg.jpg'

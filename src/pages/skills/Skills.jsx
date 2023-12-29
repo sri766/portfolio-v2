@@ -1,6 +1,9 @@
 import React from 'react'
 import './style.scss'
 
+
+
+
 const Skills = ({mode}) => {
 
   const Skills = [
@@ -12,12 +15,14 @@ const Skills = ({mode}) => {
     {name:'Node',icon:'./src/assets/node.png'},
     {name:'Sass',icon:'./src/assets/sass.png'},
     {name:'Git',icon:'./src/assets/git.png'},
-    {name:'Github',icon:'./src/assets/3.png'},
+    {name:'Python',icon:'./src/assets/python.png'},
     {name:'Docker',icon:'./src/assets/docker.png'},
     {name:'Kubernetes',icon:'./src/assets/kubernetes.png'},
+    {name:'Jeninks',icon:'./src/assets/jenkins.png'},
     {name:'AWS',icon:'./src/assets/aws.svg'},
     {name:'Figma',icon:'./src/assets/figma.png'},
     {name:'C++',icon:'./src/assets/cpp.png'},
+
   ]
   
   return (
