@@ -12,7 +12,7 @@ const About = ({mode}) => {
     <div className={`about_container ${mode === 'light' ? 'light-mode' : ''}`}>
       <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
           <img src={
-            mode === 'light' ? './assets/bg-light.svg' : './assets/bg-about.jpg'
+            mode === 'light' ? './assets/bg-light.svg' : './assets/bg-about.svg'
           } alt='bg'/>
         </div>
       <ContentWrapper>

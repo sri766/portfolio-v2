@@ -27,7 +27,7 @@ const HeroBanner = ({mode}) => {
 
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
           <img src={
-            mode === 'light' ? './assets/bg-light.svg' : './assets/bg.jpg'
+            mode === 'light' ? './assets/bg-light.svg' : './assets/bg.svg'
           } alt='bg'/>
         </div>
         <div className="socials">

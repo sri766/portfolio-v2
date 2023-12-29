@@ -9,7 +9,7 @@ const Contact = ({mode}) => {
     <div className={`contact ${mode === 'light'? 'light-mode': ''}`}>
       <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
           <img src={
-            mode === 'light' ? './assets/bg-light.svg' : './assets/bg-about.jpg'
+            mode === 'light' ? './assets/bg-light.svg' : './assets/bg-about.svg'
           } alt='bg'/>
         </div>
           <div className="contact_img">
