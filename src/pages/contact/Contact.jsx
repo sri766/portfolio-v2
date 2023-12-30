@@ -38,13 +38,13 @@ const Contact = ({mode}) => {
             <label>Message</label>
             <textarea 
               name="Message" 
-              id="" 
+              id="message" 
               cols="30" 
               rows="10"
-              placeholder='Message'
+              placeholder='Write your message here!'
               required
             ></textarea>
-            <button type='submit'>Send</button>
+            <button type='submit'>POST</button>
           </form>
     </div>
   )

@@ -1,9 +1,6 @@
 import React from 'react'
 import './style.scss'
 
-
-
-
 const Skills = ({mode}) => {
 
   const Skills = [
@@ -22,12 +19,11 @@ const Skills = ({mode}) => {
     {name:'AWS',icon:'./assets/aws.svg'},
     {name:'Figma',icon:'./assets/figma.png'},
     {name:'C++',icon:'./assets/cpp.png'},
-
   ]
   
   return (
     <div className={`skills_container ${mode === "light" ? "light-mode" : ""}`}>
-      <h1>Skills</h1>
+      <h1>🚀{" "}Skills</h1>
       <div className='skill_items' >
         {
           Skills.map((skill,index) => (

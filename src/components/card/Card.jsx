@@ -6,7 +6,7 @@ const Card = ({mode,projects}) => {
 
   return (
     <div className={`container ${mode==="light"?'light-mode':''}`}>
-        <h1 className='title'>Featured Projects</h1>                                             
+        <h1 className='title'>😎{" "}Featured Projects</h1>                                             
         <div className={`card`}>
             {projects?.map((item)=>{
                 return(

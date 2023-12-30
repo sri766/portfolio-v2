@@ -1,5 +1,7 @@
 import React from 'react'
+import './style.scss'
 import { blog } from '../../components/data/Data'
+import { FaHeart } from 'react-icons/fa'
 
 const Blog = ({mode,blog}) => {
   
@@ -9,7 +11,7 @@ const Blog = ({mode,blog}) => {
         <h1>Blog</h1>
       </div>
       <div className='blog-container'>
-        Coming Soon
+       <h1>Coming Soon🎉</h1>
       </div>
     </div>
   )
