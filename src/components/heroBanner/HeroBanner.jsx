@@ -12,6 +12,7 @@ const HeroBanner = ({mode}) => {
     { icon: <IoLogoInstagram />, url: 'https://www.instagram.com/sri_santh._/' },
     { icon: <IoLogoFacebook />, url: 'https://www.facebook.com/srisanth.seth' },
   ];
+  
 
   return (
     <div className={`home_container ${mode === 'light' ? 'light-mode' : ''}`}>

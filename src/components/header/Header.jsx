@@ -14,30 +14,35 @@ const variants = {
 }
 
 const Header = ({mode,toggleMode}) => {
-  const [isOpen, setIsOpen] = useState(false)
   const [mobileView, setMobileView] = useState(false)
   const navigate = useNavigate()
   
-  const handleResize = () => {
-    if(window.innerWidth < 768){
-      setMobileView(true)
-    }else{
-      setMobileView(false)
-    }
-  }
-
   useEffect(() => {
     // Initial setup
     handleResize();
-
+    console.log("Effect: Initial setup");
+  
     // Listen for window resize events
     window.addEventListener('resize', handleResize);
-
+    console.log("Effect: Event listener added");
+  
     // Clean up the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+      console.log("Effect: Event listener removed");
     };
   }, []);
+  
+  const handleResize = () => {
+    console.log("Resizing...", window.innerWidth);
+  
+    if (window.innerWidth < 850) {
+      setMobileView(true);
+    } else {
+      setMobileView(false);
+    }
+  };
+  
 
   return (
     <div className={`header ${mode === 'light' ? 'light-mode' : ''}`}>
@@ -50,12 +55,10 @@ const Header = ({mode,toggleMode}) => {
             {mode === 'dark' ? (
               <>
                 <CiLight />
-                Light Mode
               </>
             ) : (
               <>
                 <MdDarkMode />
-                Dark Mode
               </>
             )}
           </button> 
