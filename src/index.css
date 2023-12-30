@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Outfit";
   src: url(/assets/Outfit.ttf);
@@ -18,8 +19,6 @@
 
 }
 
-
-
 body {
   margin: 0;
   padding:0;
@@ -27,16 +26,3 @@ body {
 }
 
 
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #001c34;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}

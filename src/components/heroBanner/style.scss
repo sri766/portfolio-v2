@@ -3,6 +3,7 @@
     src: url(/assets/stay-wild.otf) format("truetype");
 }
 
+@import "../../mixins.scss";
 
 
 .home_container{
@@ -48,6 +49,7 @@
         position: absolute;
         z-index: 6;
         
+    
         li{
             z-index: 6;
             text-decoration: none;
@@ -151,3 +153,5 @@
         }
     }
 }
+
+

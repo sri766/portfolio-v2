@@ -1,6 +1,5 @@
 import React from 'react'
 import './style.scss'
-import { Form, Button } from 'react-bootstrap'
 
 
 const Contact = ({mode}) => {
@@ -21,37 +20,32 @@ const Contact = ({mode}) => {
               )
             }
           </div>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicName">
-              <Form.Label>Name</Form.Label>
-              <Form.Control type="name" placeholder="Enter Name" />
-              <Form.Text className="text-muted">
-              </Form.Text>
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                </Form.Text>
-              </Form.Group>
-
-              <Form.Group className='mb-3' >
-                  <Form.Label>
-                    Write your post:
-                    <textarea
-                      name="postContent"
-                      defaultValue="Post your Message here!"
-                      rows={4}
-                      cols={40}
-                    />
-                  </Form.Label>
-                </Form.Group>
-                
-                <Button type="submit">
-                  Submit
-              </Button>
-          </Form>
+          <form method="POST" className="contact_form" action="https://formspree.io/f/mrgngban">
+            <label>Name</label>
+            <input 
+              type="text" 
+              name='Name'
+              placeholder='Name'
+              required
+            />
+            <label>Email</label>
+            <input 
+              type="email" 
+              name='Email'
+              placeholder='Email'
+              required
+            />
+            <label>Message</label>
+            <textarea 
+              name="Message" 
+              id="" 
+              cols="30" 
+              rows="10"
+              placeholder='Message'
+              required
+            ></textarea>
+            <button type='submit'>Send</button>
+          </form>
     </div>
   )
 }
