@@ -24,7 +24,7 @@ export const projects = [
       tag: "Frontend",
       subtitle: "React, Node.js, TMDB Api, Sass",
       description:
-        "",
+        "Explore the world of cinema with the Movie Explorer App, a sophisticated React application powered by Redux and integrated with The Movie Database (TMDB) API. This feature-rich application provides users with an immersive and seamless experience as they navigate through a vast collection of movies and TV shows.",
       image: "./assets/movie-db.png",
       link: "https://jsbootcamp.com",
       github:''
@@ -44,5 +44,5 @@ export const projects = [
 
 
   export const blog =[
-
+    
   ]

@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.scss'
+import { FaCode,FaExternalLinkAlt} from "react-icons/fa";
 
 const Card = ({mode,projects}) => {
 
@@ -20,8 +21,8 @@ const Card = ({mode,projects}) => {
                             <h4>{item.subtitle}</h4>
                         </div>
                         <div className="card_link_github">
-                            <a href={item.link}>Visit</a>
-                            <a href={item.github}>Github</a>
+                            <a href={item.link}><FaExternalLinkAlt />Visit</a>
+                            <a href={item.github}><FaCode />Github</a>
                         </div>
                         <div className='card_desc'>
                             <p>{item.description}</p>
