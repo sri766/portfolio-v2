@@ -21,7 +21,7 @@ const HeroBanner = ({mode}) => {
         <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
         <Type mode={mode}/>
 
-        <a className='home_button' target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/10i-mq64Kdnj9YHj20JsYlvKMuTBFKamM/view?usp=sharing' >
+        <a className='home_button' target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/10i-mq64Kdnj9YHj20JsYlvKMuTBFKamM/view?usp=sharing'>
           {<IoDocumentTextOutline />}Resume
         </a>
 
