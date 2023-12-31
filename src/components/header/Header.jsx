@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
-import { CiMenuBurger } from 'react-icons/ci';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const variants = {
   open: { opacity: 1, x: 0 },
@@ -50,7 +50,7 @@ const Header = ({mode,toggleMode}) => {
         <h2 onClick={()=>navigate('/')}>Srisanth</h2>
       </div>
       { mobileView? (
-        <>
+        <ul className='content-list'>
           <button className={`btn ${mode === 'light' ? 'light-mode' : ''}`} onClick={toggleMode}>
             {mode === 'dark' ? (
               <>
@@ -62,8 +62,8 @@ const Header = ({mode,toggleMode}) => {
               </>
             )}
           </button> 
-          <CiMenuBurger />
-        </>
+          <li><RxHamburgerMenu  className='hamburger'/></li>
+        </ul>
       ):(
         <>
           <ul className='content-list'>

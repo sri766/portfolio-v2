@@ -4,7 +4,7 @@
     align-items:center;
     text-align: center;
     padding-top: 0.035rem;
-    background-color: #001b30;
+    background-color: #0c002e;
 
 
 
@@ -20,7 +20,7 @@
     .title{
         font-size: 2rem;
         font-weight: 600;
-        color: #ffd000;
+        color: #ffaa00;
         margin-top: 5rem;
         position: relative;
         z-index: 5;
@@ -74,7 +74,7 @@
             justify-content: center;
             
             a{
-                color: #1e001f;
+                color: #200021;
                 text-decoration: none;
             }
         }
@@ -121,16 +121,21 @@
 }
 
 
-@media screen and (max-width: 650px) {
-    .card{
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 12rem;
-        gap: 1rem;
-        grid-template-columns: 3 24rem 24rem;
-        padding: 1rem;
-        bottom: 0;
-        
+@media screen and (max-width: 800px) {
+    .container{
+        .card{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 2rem;
+            gap: 1rem;
+            grid-template-columns: 24rem ;
+            padding: 1rem;
+            bottom: 0;
+            .card_container{
+                top: 1rem;
+            }
+            
+        }
     }
 }

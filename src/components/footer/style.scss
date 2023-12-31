@@ -36,13 +36,14 @@
 }
 
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
     .footer{
         display: flex;
         flex-direction: column;
         min-width: 650px;
         gap: 1rem;
         padding: 1rem;
+        bottom: 0;
         .footer_contents{
             flex-direction: column;
             gap: 0.5rem;
