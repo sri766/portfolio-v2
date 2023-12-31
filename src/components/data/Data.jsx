@@ -26,8 +26,8 @@ export const projects = [
       description:
         "Explore the world of cinema with the Movie Explorer App, a sophisticated React application powered by Redux and integrated with The Movie Database (TMDB) API. This feature-rich application provides users with an immersive and seamless experience as they navigate through a vast collection of movies and TV shows.",
       image: "./assets/movie-db.png",
-      link: "https://jsbootcamp.com",
-      github:''
+      link: "https://movie-db-theta-ten.vercel.app/",
+      github:'https://github.com/sri766/MovieDB'
     },
     {
       title: "CI/CD pipeline",
@@ -36,7 +36,7 @@ export const projects = [
       description:
         "Built a Node.js Todo app with CRUD features.Integrated CI/CD pipeline via Jenkins, GitHub webhooks, and deployed on AWS EC2.",
       image: "./assets/ci-cd.png",
-      link: "https://pythonbootcamp.com",
+      link: "https://sri766.hashnode.dev/day-81-project-2declarative-pipeline",
       github:''
     },
   ];
