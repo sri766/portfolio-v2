@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { BrowserRouter,Route, Routes } from 'react-router-dom'
-
+import './components/header/navItems.scss'
 //pages
 import Home from './pages/home/Home'
 import About from './pages/about/About'
@@ -27,10 +27,10 @@ const App =() =>{
       <Routes>
         <Route path="/" element={<Home mode={mode} projects={projects}/>} />
         <Route path="/about" element={<About mode={mode}/>} />
-        <Route path="/contact" element={<Contact mode={mode}/>} />
+        <Route path="/blog" element={<Blog mode={mode}/>} />
         <Route path="/skills" element={<Skills mode={mode}/>} />
         <Route path="/projects" element={<Projects mode={mode} projects={projects}/>} />
-        <Route path="/blog" element={<Blog mode={mode}/>} />
+        <Route path="/contact" element={<Contact mode={mode}/>} />
       </Routes>
       <Footer mode={mode}/>
     </BrowserRouter>

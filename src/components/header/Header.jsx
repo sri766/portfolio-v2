@@ -1,22 +1,40 @@
 import React,{useState, useEffect} from 'react'
 import './style.scss'
 
+
 //components,icons
-import { motion } from "framer-motion"
+import { motion, AnimatePresence} from "framer-motion"
 import { CiLight } from "react-icons/ci";
 import { MdDarkMode } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
+import NavbarItems from './NavItems';
 
-const variants = {
-  open: { opacity: 1, x: 0 },
-  closed: { opacity: 0, x: "-100%" },
-}
 
 const Header = ({mode,toggleMode}) => {
+  const [isToggled, setToggle] = useState(false);
   const [mobileView, setMobileView] = useState(false)
   const navigate = useNavigate()
   
+  const navContainer = {
+    visible: {
+      //x: 0,
+      opacity: 1,
+      transition: {
+        x: { velocity: 100 },
+        duration: 0.3
+      }
+    },
+    hidden: {
+      //x: -250,
+      opacity: 0,
+      transition: {
+        x: { velocity: 100 },
+        duration: 0.3
+      }
+    }
+  };
+
   useEffect(() => {
     // Initial setup
     handleResize();
@@ -50,6 +68,7 @@ const Header = ({mode,toggleMode}) => {
         <h2 onClick={()=>navigate('/')}>Srisanth</h2>
       </div>
       { mobileView? (
+        <>
         <ul className='content-list'>
           <button className={`btn ${mode === 'light' ? 'light-mode' : ''}`} onClick={toggleMode}>
             {mode === 'dark' ? (
@@ -62,8 +81,22 @@ const Header = ({mode,toggleMode}) => {
               </>
             )}
           </button> 
-          <li><RxHamburgerMenu  className='hamburger'/></li>
+          <li><RxHamburgerMenu  className={`hamburger ${mode === "light"? "light-mode" : ""}`} onClick={() => setToggle(!isToggled)}/></li>
         </ul>
+        <AnimatePresence>
+        {isToggled && (
+          <motion.div
+            className="navbar"
+            initial="hidden"
+            animate={isToggled ? "visible" : "hidden"}
+            exit="hidden"
+            variants={navContainer}
+          >
+            <NavbarItems className='navList' mode ={mode} isToggled={isToggled} />
+          </motion.div>
+        )}
+        </AnimatePresence>
+        </>
       ):(
         <>
           <ul className='content-list'>

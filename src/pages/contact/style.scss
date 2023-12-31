@@ -117,9 +117,35 @@
         
         }
     }
-        
-        
-    
-    
-    
+}
+
+@media screen and (max-width: 800px) {
+    .contact{
+        display: flex;
+        padding: auto 2rem;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .contact_img{
+            height: 12rem;
+            width: 12rem;
+        }
+        .contact_form{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            // text-align: center;
+            padding: 1rem 1rem;
+            margin: 0 auto;
+            input{
+                width: 95%;
+            }
+            textarea{
+                width: 95%;
+            }
+            button{
+                align-self: center;
+            }
+        }
+    }
 }

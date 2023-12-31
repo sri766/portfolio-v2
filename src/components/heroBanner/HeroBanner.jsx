@@ -2,6 +2,8 @@ import React from 'react'
 import './style.scss'
 import { IoDocumentTextOutline,IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
 import Type from '../type/Type';
+
+
 const HeroBanner = ({mode}) => {
 
 
@@ -32,15 +34,15 @@ const HeroBanner = ({mode}) => {
           } alt='bg'/>
         </div>
         <div className="socials">
-        <ul>
-        {socialMediaLinks.map((socialMedia, index) => (
-          <li key={index}>
-            <a href={socialMedia.url} target="_blank" rel="noopener noreferrer">
-              {socialMedia.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
+          <ul>
+            {socialMediaLinks.map((socialMedia, index) => (
+              <li key={index}>
+                <a href={socialMedia.url} target="_blank" rel="noopener noreferrer">
+                  {socialMedia.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
     </div>
   )

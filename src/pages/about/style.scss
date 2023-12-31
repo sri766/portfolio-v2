@@ -1,7 +1,7 @@
 .about_container{
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,16 +61,22 @@
         text-align: justify;
         z-index: 3;
     }
-    .list_socials{
-        
-        justify-content: center;
-        .list_contents{
-            display: flex;
-            justify-content: start;
-            align-items: center;
-            flex-direction: row;
-            gap: 2rem;
-            z-index: 3;
-        }
-    }
 }
+
+@media screen and (max-width: 800px) {
+    .about_container {
+      width: 35rem;
+      text-align: start;
+      height: 100vh;
+    }
+    
+    .about_title {
+        font-size: 2rem;
+    }
+    
+    .about_desc {
+        text-align: start;
+        font-size: 1rem;
+    }
+  
+  }

@@ -1,15 +1,16 @@
-
 .header {
     padding: 15px 20px;
     display: flex;
     overflow: hidden;
     justify-content: space-evenly;
     position: fixed;
+    overflow: visible;
     width: 100%;
     top: 0;
     z-index: 1000;
     height: 2.5rem;
     backdrop-filter: blur(20px);
+
 
     &.light-mode {
         backdrop-filter: blur(20px);
@@ -31,7 +32,7 @@
         flex: 0.9;
         color: #fff;
         font-weight: 700;
-        font-size: 24px;
+        font-size: 1.2rem;
         font-family: outfit,sans-serif;
         cursor: pointer;
     }
@@ -58,9 +59,8 @@
 
     }
     .btn{
-        margin: 0;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1rem;
         display: flex;
         gap: 0.175rem;
         font-family: outfit,sans-serif;
@@ -86,8 +86,9 @@
 @media screen and (max-width: 800px) {
     .header {
         width: 100%;
+        position: fixed;
         .logo{
-            font-size: 1rem;
+            font-size: 1.2rem;
             flex: 0.9;
         }
         .content-list {
@@ -97,14 +98,17 @@
  
             .hamburger{
                 z-index: 5;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                cursor: pointer;
                 font-size: 2rem;
                 color: #fff;
-                padding-right: 1rem;
+                padding: 0 2rem 0 0.45rem;
                 font-weight: 900;
+
+                &.light-mode{
+                    color:#000000
+                }
             }
+
         }
     }
     
