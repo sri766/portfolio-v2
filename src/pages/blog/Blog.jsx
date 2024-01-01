@@ -6,7 +6,7 @@ import { FaHeart } from 'react-icons/fa'
 const Blog = ({mode,blog}) => {
   
   return (
-    <div className='blog'>
+    <div className={`blog ${mode === "light"? "light-mode": ""}`}>
       <div className='title'>
         <h1>Blog</h1>
       </div>
