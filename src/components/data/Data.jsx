@@ -7,7 +7,7 @@ export const projects = [
         "Built Disney Hotstar clone with React,Redux, and Firebase.Showcased adeptness in React frameworks, seamless integration, and skillful web app creation.",
       image: "./assets/disney-2.png",
       link: "https://todo-3ce31.web.app/",
-      github:''
+      github:'https://github.com/sri766/disney-clone'
     },
     {
       title: "StoreTrend",
@@ -16,8 +16,8 @@ export const projects = [
       description:
         "Developed a React-based E-commerce site Powered with Redux, Strapi and Stripe.   Implemented a user-friendly Add to Cart feature to enhance the shopping experience with   Redux. Combined Stripe to provide a robust, smooth transaction and Checkout Page",
       image: "./assets/storetrend-1.png",
-      link: "https://reedbarger.com",
-      github:''
+      link: "",
+      github:'https://github.com/sri766/StoreTrend'
     },
     {
       title: "MovieFlex",

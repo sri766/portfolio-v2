@@ -47,6 +47,7 @@
         color: black;
         margin: 2rem 2rem;
         display: flex;
+        box-shadow: 2px 2px 6px 2px rgb(0,0,0,0.2);
         flex-direction: column;
         backdrop-filter: blur(20px);
         
@@ -81,7 +82,8 @@
         
 
         .card_subtitle{
-            top: 4rem;
+            top: 2.4rem;
+            text-shadow: 1px 1px 2px rgb(174, 0, 255), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(0, 0, 0);
         }
 
         .card_img{
@@ -92,6 +94,7 @@
             
             
             img{
+                background-image:linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.796));
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
