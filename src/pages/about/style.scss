@@ -63,20 +63,32 @@
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     .about_container {
-      width: 35rem;
-      text-align: start;
-      height: 100vh;
+        width: 100%;
+        text-align: start;
+        height: 100vh;
+        padding: 2rem;
+        display: flex;
+        text-size-adjust: 80%;
+        
+        
+        &.light-mode{
+            background-color: #fff;
+        }
     }
     
     .about_title {
         font-size: 2rem;
+        width: 80%;
+
     }
     
     .about_desc {
         text-align: start;
-        font-size: 1rem;
+        font-size: 0.5rem;
+        width: 80%;
     }
+
   
   }
