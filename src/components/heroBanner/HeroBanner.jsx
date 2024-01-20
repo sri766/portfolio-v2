@@ -3,7 +3,6 @@ import './style.scss'
 import { IoDocumentTextOutline,IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
 import Type from '../type/Type';
 
-
 const HeroBanner = ({mode}) => {
 
 
@@ -19,7 +18,7 @@ const HeroBanner = ({mode}) => {
   return (
     <div className={`home_container ${mode === 'light' ? 'light-mode' : ''}`}>
         <div className="home_img">
-          <img src="./assets/srisanth.jpg" alt="srisanth" />
+          <img rel="preload" src="./assets/srisanth.jpg" alt="srisanth" />
         </div>
         <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
         <Type mode={mode}/>
@@ -29,7 +28,7 @@ const HeroBanner = ({mode}) => {
         </a>
 
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
-          <img src={
+          <img rel="preload" src={
             mode === 'light' ? './assets/bg-light.svg' : './assets/bg.svg'
           } alt='bg'/>
         </div>
@@ -44,6 +43,7 @@ const HeroBanner = ({mode}) => {
             ))}
           </ul>
         </div>
+        <div className="blur_container"></div>
     </div>
   )
 }

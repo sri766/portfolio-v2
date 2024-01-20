@@ -1,12 +1,25 @@
 import React from 'react'
 import './style.scss'
 import { FaCode,FaExternalLinkAlt} from "react-icons/fa";
-
+import { motion } from 'framer-motion';
 const Card = ({mode,projects}) => {
 
   return (
     <div className={`container ${mode==="light"?'light-mode':''}`}>
-        <h1 className='title'>😎{" "}Featured Projects</h1>                                             
+        <motion.h1 className='title'
+            initial={{
+                opacity:0,y:-10
+            }}
+            animate={{
+                opacity:1
+            }}
+            transition={{
+                duration:1,
+                delay:0.5,
+                ease : "easeInOut"
+            }}
+
+        >😎{" "}Featured Projects</motion.h1>                                             
         <div className={`card`}>
             {projects?.map((item)=>{
                 return(

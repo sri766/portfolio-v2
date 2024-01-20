@@ -1,3 +1,5 @@
+@import "../../mixins.scss";
+
 .about_container{
     position: relative;
     width: 100%;
@@ -63,12 +65,13 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@include md {
     .about_container {
         width: 100%;
         text-align: start;
         height: 100vh;
-        padding: 2rem;
+        padding: 2rem 2rem;
+        font-size: 0.45rem;
         display: flex;
         text-size-adjust: 80%;
         
@@ -79,16 +82,15 @@
     }
     
     .about_title {
-        font-size: 2rem;
+        font-size: 1rem;
         width: 80%;
 
     }
     
     .about_desc {
         text-align: start;
-        font-size: 0.5rem;
+        font-size: 0.25rem;
         width: 80%;
     }
 
-  
   }
