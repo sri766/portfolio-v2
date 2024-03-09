@@ -23,7 +23,7 @@ const Skills = ({mode}) => {
   
   return (
     <div className={`skills_container ${mode === "light" ? "light-mode" : ""}`}>
-      <h1>🚀{" "}Skills</h1>
+      <h1>Skills{" "}🚀</h1>
       <div className='skill_items' >
         {
           Skills.map((skill,index) => (

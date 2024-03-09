@@ -1,6 +1,7 @@
 import React from 'react'
 import './style.scss'
 import { IoDocumentTextOutline,IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
+import { BsDownload } from "react-icons/bs";
 import Type from '../type/Type';
 
 const HeroBanner = ({mode}) => {
@@ -24,7 +25,7 @@ const HeroBanner = ({mode}) => {
         <Type mode={mode}/>
 
         <a className='home_button' target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/10i-mq64Kdnj9YHj20JsYlvKMuTBFKamM/view?usp=sharing'>
-          {<IoDocumentTextOutline />}Resume
+          {<BsDownload />}Resume
         </a>
 
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>

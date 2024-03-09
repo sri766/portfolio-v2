@@ -44,6 +44,7 @@ const Card = ({mode,projects}) => {
             })}
         </div>
     </div>
+
   )
 }
 
