@@ -29,7 +29,7 @@ const HeroBanner = ({mode}) => {
         </a>
 
         <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>
-          <img rel="preload" src={
+          <img src={
             mode === 'light' ? './assets/bg-light.svg' : './assets/bg.svg'
           } alt='bg'/>
         </div>
