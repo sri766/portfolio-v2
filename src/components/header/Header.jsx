@@ -104,8 +104,8 @@ const Header = ({mode,toggleMode}) => {
       ):(
         <>
           <ul className='content-list'>
-            <li key='about'className='content' onClick={()=>navigate('/about')}>About</li>
             <li key='home'className='content' onClick={()=>navigate('/')}>Home</li>
+            <li key='about'className='content' onClick={()=>navigate('/about')}>About</li>
             <li key='blog'className='content' onClick={()=>navigate('/blog')}>Blog</li>
             <li key='skills'className='content' onClick={()=>navigate('/skills')}>Skills</li>
             <li key='projects'className='content' onClick={()=>navigate('/projects')}>Projects</li>
