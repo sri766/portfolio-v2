@@ -21,8 +21,10 @@
     "react-query": "^3.39.3",
     "react-router-dom": "^6.21.1",
     "react-simple-typewriter": "^5.0.1",
+    "react-slick": "^0.30.2",
     "react-social-icons": "^6.7.0",
-    "sass": "^1.69.5"
+    "sass": "^1.69.5",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

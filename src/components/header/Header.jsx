@@ -50,6 +50,10 @@ const Header = ({mode,toggleMode}) => {
       console.log("Effect: Event listener removed");
     };
   }, []);
+
+  useEffect(() => {
+    setToggle(false); // Close the hamburger menu when the route changes
+  }, [location.pathname]);
   
   const handleResize = () => {
     console.log("Resizing...", window.innerWidth);
@@ -100,12 +104,12 @@ const Header = ({mode,toggleMode}) => {
       ):(
         <>
           <ul className='content-list'>
-            <li className='content' onClick={()=>navigate('/')}>Home</li>
-            <li className='content' onClick={()=>navigate('/about')}>About</li>
-            <li className='content' onClick={()=>navigate('/blog')}>Blog</li>
-            <li className='content' onClick={()=>navigate('/skills')}>Skills</li>
-            <li className='content' onClick={()=>navigate('/projects')}>Projects</li>
-            <li className='content' onClick={()=>navigate('/contact')}>Contact</li>
+            <li key='about'className='content' onClick={()=>navigate('/about')}>About</li>
+            <li key='home'className='content' onClick={()=>navigate('/')}>Home</li>
+            <li key='blog'className='content' onClick={()=>navigate('/blog')}>Blog</li>
+            <li key='skills'className='content' onClick={()=>navigate('/skills')}>Skills</li>
+            <li key='projects'className='content' onClick={()=>navigate('/projects')}>Projects</li>
+            <li key='contact'className='content' onClick={()=>navigate('/contact')}>Contact</li>
             <button className={`btn ${mode === 'light' ? 'light-mode' : ''}`} onClick={toggleMode}>
               {mode === 'dark' ? (
                 <>

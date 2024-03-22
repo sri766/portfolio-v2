@@ -1,154 +1,125 @@
-.container{
+.container {
     height: 100%;
     width: 100%;
-    align-items:center;
-    text-align: center;
     padding-top: 0.035rem;
     background-color: #04152d;
 
-
-
-    &.light-mode{
+    &.light-mode {
         background-color: #ffffff;
         color: #000000;
 
-        .title{
+        .title {
             color: #000000;
         }
-        
     }
-    .title{
-        font-size: 2rem;
+
+    .title {
+        font-size: 2.5rem;
         font-weight: 600;
         color: #ffaa00;
         margin-top: 5rem;
         position: relative;
         z-index: 5;
-        font-size: 2.5rem;
         text-align: center;
-
     }
 
-    
+    .card_container {
+        display: flex !important;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
 
-.card{
-    position: relative;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 24rem 24rem;
-    padding: 2rem 2rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    
-
-    .card_container{
-        background-color: #ffffff;
-        color: black;
-        margin: 2rem 2rem;
-        display: flex;
-        box-shadow: 2px 2px 6px 2px rgb(0,0,0,0.2);
-        flex-direction: column;
-        
-
-        .card_title, .card_subtitle{
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            color: #000000;
-            align-items: center;
-            flex-direction: column;
-            
-        }
-
-        .card_link_github {
-            position: relative;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 600;
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            justify-content: center;
-            
-            a{
-                color: #200021;
-                text-decoration: none;
-            }
-        }
-
-
-        .card_img{
-            height: 100%;
-            width: 95%;
-            position: relative;
-            padding: 0.5rem 0.5rem;
-            
-            
-            img{
-                background-image:linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.796));
-                height: 100%;
+        .left {
+            width: 25%;
+            img {
+                border-radius: 2rem;
                 width: 100%;
+                height: 100%;
                 object-fit: cover;
-                opacity: 1;
-                z-index: 3;
             }
         }
-        .card_desc{
-            position: absolute;
-            opacity: 0;
-            text-align: justify;
-            padding: 1rem;
-            height: 13.5rem;
-            width: 17.5rem;
-            color:#000000;
-            
-            &:hover{
-                opacity: 1;
-                background-color: #ffffff;
-                
-            }
 
+        .right {
+            width: 30%;
+            text-align: center;
+
+            .card_link_github {
+                display: flex;
+                justify-content: center;
+                font-size: larger;
+                gap: 4rem;
+            }
         }
     }
 
-    
-}
-}
+    .slick-slider {
+        width: 100%;
+        position: relative;
+    }
 
+    .slick-prev,
+    .slick-next {
+        color: #ffffff9b;
+        z-index: 1;
+        font-size: larger;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
 
-@media screen and (max-width: 768px) {
-    .container{
-        .card{
+        &:hover {
+            color: #ffffff;
+        }
+    }
+
+    .slick-prev {
+        left: 10rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    .slick-next {
+        right: 10rem;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    @media screen and (max-height: 760px) {
+        .card_container {
+            margin: 1rem 0.5rem;
             display: flex;
             flex-direction: column;
-            position: relative;
-            top: 2rem;
-            gap: 1rem;
-            grid-template-columns: 24rem ;
-            padding: 1rem;
-            bottom: 0;
-            .card_container{
-                top: 1rem;
+            
+            .left{
+                width:70%;
+            }
 
-                .card_desc{
-                    position: relative;
-                    opacity: 1;
-                    height: 100%;
-                    width: 100%;
-                    padding: 0;
-                    background-color: #ffffff;
-                    color: #000000;
-                    text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 1rem;
-                    z-index: 5;
+            .right{
+                width:90%;
+                text-align: center;
+                
+                .card_title{
+                    font-size: 0.9rem;
+                }
+                .card_subtitle{
+                    font-size: 0.8rem;
+                }
+                .card_link_github{
+                    font-size: 0.8rem;
+                    gap: 2rem;
                 }
             }
-            
+
+        }
+        .slick-prev {
+            left: 2rem;
+        }
+        .slick-next {
+            right: 2rem;
         }
     }
 }
