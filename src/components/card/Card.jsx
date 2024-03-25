@@ -1,7 +1,6 @@
 import React from 'react';
 import './style.scss';
 import { FaCode, FaExternalLinkAlt } from 'react-icons/fa';
-import { motion } from 'framer-motion';
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -20,14 +19,10 @@ const Card = ({ mode, projects }) => {
 
   return (
     <div className={`container ${mode === 'light' ? 'light-mode' : ''}`}>
-      <motion.h1
-        className="title"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+      <h1 className="title"
       >
         😎 Featured Projects
-      </motion.h1>
+      </h1>
       <Slider {...settings}>
         {projects?.map((item) => (
           <div className="card_container" key={item.title}>
@@ -43,11 +38,14 @@ const Card = ({ mode, projects }) => {
               </div>
               <div className="card_link_github">
                 <a href={item.link}>
-                  <FaExternalLinkAlt /> Visit
+                  <FaExternalLinkAlt /> {
+                    item.blog === 'true' ? "Read More" : "Visit"
+                  }
                 </a>
-                <a href={item.github}>
+                {item.blog ==='false'? (<a href={item.github}>
                   <FaCode /> Github
-                </a>
+                </a>):
+                ''}
               </div>
               <div className="card_desc">
                 <p>{item.description}</p>

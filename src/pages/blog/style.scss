@@ -1,52 +1,86 @@
-.blog{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+.blog-section {
+    text-align: center;
     padding-top: 5rem;
-
+    width: 100%;
+    background:#111827;
     &.light-mode{
-        color: black;
+      background-color: #ffffff;
+      color: #111827;
+      .container{
         background-color: #fff;
-        .blog__card{
-            box-shadow: 2px 2px 6px 2px rgb(0,0,0,0.2);
-
+        .flex-container{
+          .blog-card{
+            .blog-content{
+              .blog-title{
+                color: #000000;
+              }
+              .blog-brief{
+                color: #111827;
+              }
+              .blog-link{
+                color: #4299e1;
+              }
+            }
+          }
         }
-        
+      }
     }
-    .blog__card{
-        margin: 1rem 0.5rem;
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      background: #111827;
+  
+      .flex-container {
         display: flex;
-        gap: 1rem;
-        border-radius: 0.25rem;
-        width: 60%;
-        height: 40%;
-        background-color: #fff;
-        .blog__card__img{
-            width: 50rem;
-            height: 15rem;
-            background-image:linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(0, 0, 0, 0.796));
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+  
+        .blog-card {
+          width: calc(33.33% - 20px);
+          margin-bottom: 20px;
+          border: 2px solid #707070 ;
+          border-radius: 8px;
+          overflow: hidden;
+  
+          .blog-image {
             
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                aspect-ratio: 3/4;
+            img {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
             }
+          }
+  
+          .blog-content {
+            padding: 20px;
+  
+            .blog-title {
+              font-size: 1.5rem;
+              font-weight: bold;
+              color: #ffffff;
+              margin-bottom: 10px;
+            }
+  
+            .blog-brief {
+              font-size: 1rem;
+              color: #ffffff;
+              margin-bottom: 15px;
+            }
+  
+            .blog-link {
+              color: #4299e1;
+              text-decoration: none;
+              font-weight: bold;
+              margin-bottom: 10px;
+              display: inline-block;
+            }
+          }
         }
-        .blog__contents{
-            display: flex;
-            flex-direction: column;
-            .blog__title{
-                color: #000;
-            }
-            .blog__brief{
-                color: #000;
-            }
-        }
+      }
     }
+  }
+  
 
+  @media screen and (max-width: 768px){
     
-}
+  }

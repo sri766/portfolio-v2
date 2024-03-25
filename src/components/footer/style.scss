@@ -11,8 +11,8 @@
     bottom: 0;
 
     &.light-mode{
-        background-color: #f59aff;
-        color: #000;
+        background-color: #af42e1;
+        color: #000000;
         font-size: 1rem;
         .footer_contents{
             
@@ -24,14 +24,12 @@
 
     .footer_contents{
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 1rem;
-        .content{
-            text-decoration: none;
-            color: #fff;
-            list-style: none;
-        }
+        font-size: 1rem;
+        text-decoration: none;
+        color: #ffffff;
+        list-style: none;
+        font-weight: 700;
     }
 }
 
@@ -47,9 +45,7 @@
         .footer_contents{
             flex-direction: column;
             gap: 0.5rem;
-            .content{
-                text-align: center;
-            }
+            text-align: center;
         }
     }
 }   

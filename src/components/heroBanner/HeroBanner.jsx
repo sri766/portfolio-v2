@@ -19,7 +19,7 @@ const HeroBanner = ({mode}) => {
   return (
     <div className={`home_container ${mode === 'light' ? 'light-mode' : ''}`}>
         <div className="home_img">
-          <img rel="preload" src="./assets/srisanth.jpg" alt="srisanth" />
+          <img rel="preload" src="./assets/srisanth.webp" alt="srisanth" />
         </div>
         <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
         <Type mode={mode}/>

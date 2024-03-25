@@ -2,7 +2,7 @@
     height: 100%;
     width: 100%;
     padding-top: 0.035rem;
-    background-color: #04152d;
+    background-color: #111827;
 
     &.light-mode {
         background-color: #ffffff;
@@ -16,6 +16,22 @@
         .slick-prev {
             color: #000000;
         }
+
+        // .card_link_github{
+        //     a{
+        //         text-decoration: none;
+        //         align-items: center;
+        //         color: rgb(0, 0, 0);
+        //         padding: 0.5rem 2rem;
+        //         border-radius: 1.5rem;
+        //         border: 2px solid white;
+
+        //             &:hover{
+        //                 color: #ffbb00;
+
+        //             }
+        //     }
+        // }
     }
 
     .title {
@@ -31,11 +47,13 @@
     .card_container {
         display: flex !important;
         width: 100%;
-        height: 100vh;
+        height: 100%;
         position: relative;
         align-items: center;
         justify-content: center;
         gap: 3rem;
+        padding-top: 5rem;
+        margin-bottom: 8rem;
 
         .left {
             width: 25%;
@@ -56,6 +74,21 @@
                 justify-content: center;
                 font-size: larger;
                 gap: 4rem;
+
+                a{
+                    text-decoration: none;
+                    align-items: center;
+                    color: rgb(174, 0, 255);
+                    padding: 0.5rem 2rem;
+                    border-radius: 1.5rem;
+                    border: 2px solid white;
+
+                    &:hover{
+                        color: #ffbb00;
+                    }
+
+
+                }
             }
         }
     }
