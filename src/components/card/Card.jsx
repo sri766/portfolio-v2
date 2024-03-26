@@ -9,7 +9,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const Card = ({ mode, projects }) => {
   const settings = {
     infinite: true,
-    speed: 500,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
