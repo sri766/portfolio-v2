@@ -18,7 +18,7 @@ const Header = ({mode,toggleMode}) => {
   
   const navContainer = {
     visible: {
-      //x: 0,
+
       opacity: 1,
       transition: {
         x: { velocity: 100 },
@@ -26,7 +26,7 @@ const Header = ({mode,toggleMode}) => {
       }
     },
     hidden: {
-      //x: -250,
+
       opacity: 0,
       transition: {
         x: { velocity: 100 },
@@ -36,15 +36,15 @@ const Header = ({mode,toggleMode}) => {
   };
 
   useEffect(() => {
-    // Initial setup
+
     handleResize();
     console.log("Effect: Initial setup");
   
-    // Listen for window resize events
+
     window.addEventListener('resize', handleResize);
     console.log("Effect: Event listener added");
   
-    // Clean up the event listener on component unmount
+
     return () => {
       window.removeEventListener('resize', handleResize);
       console.log("Effect: Event listener removed");
@@ -52,11 +52,11 @@ const Header = ({mode,toggleMode}) => {
   }, []);
 
   useEffect(() => {
-    setToggle(false); // Close the hamburger menu when the route changes
+    setToggle(false);
   }, [location.pathname]);
   
   const handleResize = () => {
-    console.log("Resizing...", window.innerWidth);
+    // console.log("Resizing...", window.innerWidth);
   
     if (window.innerWidth < 850) {
       setMobileView(true);
@@ -103,7 +103,14 @@ const Header = ({mode,toggleMode}) => {
         </>
       ):(
         <>
-          <ul className='content-list'>
+          <motion.ul 
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            transition={{
+              ease: "easeInOut",
+              staggerChildren: 2
+            }}
+          className='content-list'>
             <li key='home'className='content' onClick={()=>navigate('/')}>Home</li>
             <li key='about'className='content' onClick={()=>navigate('/about')}>About</li>
             <li key='blog'className='content' onClick={()=>navigate('/blog')}>Blog</li>
@@ -123,7 +130,7 @@ const Header = ({mode,toggleMode}) => {
                 </>
               )}
             </button> 
-          </ul>
+          </motion.ul>
         </>
       )}
     </div>

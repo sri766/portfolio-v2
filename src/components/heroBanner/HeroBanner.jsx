@@ -1,11 +1,12 @@
 import React from 'react'
 import './style.scss'
-import { IoDocumentTextOutline,IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
+import { IoLogoInstagram,IoLogoGithub,IoLogoLinkedin,IoLogoTwitter, IoLogoFacebook } from "react-icons/io5";
 import { BsDownload } from "react-icons/bs";
 import Type from '../type/Type';
+import { motion } from 'framer-motion';
+
 
 const HeroBanner = ({mode}) => {
-
 
   const socialMediaLinks = [
     { icon: <IoLogoGithub />, url: 'https://www.github.com/sri766'},
@@ -18,10 +19,24 @@ const HeroBanner = ({mode}) => {
 
   return (
     <div className={`home_container ${mode === 'light' ? 'light-mode' : ''}`}>
-        <div className="home_img">
+        <motion.div 
+          initial={{opacity: 0, y: 15}} 
+          animate={{opacity: 1 ,y: 0}}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut'
+          }}
+        className="home_img" >
           <img rel="preload" src="./assets/srisanth.webp" alt="srisanth" />
-        </div>
-        <h1 className='home_title'>Hi, I am Srisanth Seth</h1>
+        </motion.div>
+        <motion.h1 
+          initial={{opacity: 0, y: 15}} 
+          animate={{opacity: 1 ,y: 0}}
+          transition={{
+            duration: 1.5,
+            ease: 'easeInOut'
+          }}
+        className='home_title'>Hi, I am Srisanth Seth</motion.h1>
         <Type mode={mode}/>
 
         <a className='home_button' target="_blank" rel="noopener noreferrer" href='https://drive.google.com/file/d/10i-mq64Kdnj9YHj20JsYlvKMuTBFKamM/view?usp=sharing'>
@@ -36,11 +51,19 @@ const HeroBanner = ({mode}) => {
         <div className="socials">
           <ul>
             {socialMediaLinks.map((socialMedia, index) => (
-              <li key={index}>
+              <motion.li 
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                transition={{
+                  duration: 1.3,
+                  ease: "easeInOut",
+                  delay: 1.3 + index * 0.1
+                }}
+              key={index}>
                 <a href={socialMedia.url} target="_blank" rel="noopener noreferrer">
                   {socialMedia.icon}
                 </a>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

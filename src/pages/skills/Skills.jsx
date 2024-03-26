@@ -1,9 +1,10 @@
-import React from 'react'
-import './style.scss'
+import React from 'react';
+import './style.scss';
+import { motion } from 'framer-motion';
 
-const Skills = ({mode}) => {
-
-  const Skills = [
+const Skills = ({ mode }) => {
+  
+  const skills = [
     {name:'HTML',icon:'./assets/html.png'},
     {name:'CSS',icon:'./assets/css.png'},
     {name:'Javascript',icon:'./assets/javascript.png'},
@@ -20,22 +21,27 @@ const Skills = ({mode}) => {
     {name:'Figma',icon:'./assets/figma.png'},
     {name:'C++',icon:'./assets/cpp.png'},
   ]
-  
+
   return (
     <div className={`skills_container ${mode === "light" ? "light-mode" : ""}`}>
-      <h1>Skills{" "}🚀</h1>
+      <h1>Skills 🚀</h1>
       <div className='skill_items' >
-        {
-          Skills.map((skill,index) => (
-            <div className='skill' key={index}>
-              <img src={skill.icon} alt={skill.name}/>
-              <p>{skill.name}</p>
-            </div>
-          ))
-        }
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            className='skill'
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            drag
+            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+          >
+            <img src={skill.icon} alt={skill.name} />
+            <p>{skill.name}</p>
+          </motion.div>
+        ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

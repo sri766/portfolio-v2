@@ -12,7 +12,7 @@ dependencies:
     specifier: ^5.3.2
     version: 5.3.3(@popperjs/core@2.11.8)
   framer-motion:
-    specifier: ^10.16.16
+    specifier: ^10.18.0
     version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
   node-fetch:
     specifier: ^3.3.2
