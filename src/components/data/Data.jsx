@@ -18,7 +18,7 @@ export const projects = [
       description:
         "Developed a React-based E-commerce site Powered with Redux, Strapi and Stripe.   Implemented a user-friendly Add to Cart feature to enhance the shopping experience with   Redux. Combined Stripe to provide a robust, smooth transaction and Checkout Page",
       image: "./assets/storetrend-1.png",
-      link: "",
+      link: "https://hammerhead-app-eafku.ondigitalocean.app/",
       github:'https://github.com/sri766/StoreTrend',
       blog: 'false'
     },
