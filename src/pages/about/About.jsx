@@ -1,12 +1,14 @@
 import React from 'react'
 import './style.scss'
 
-
 //components
 import ContentWrapper from '../../components/contentWrapper/ContentWrapper'
+import { ThemeContext } from '../../Context'
+import { useContext } from 'react'
 
+const About = () => {
 
-const About = ({mode}) => {
+  const {mode} = useContext(ThemeContext)
 
   return (
     <div className={`about_container ${mode === 'light' ? 'light-mode' : ''}`}>

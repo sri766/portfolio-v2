@@ -1,9 +1,10 @@
 import React from 'react'
 import './style.scss'
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
-
-const Contact = ({mode}) => {
-
+const Contact = () => {
+  const {mode} = useContext(ThemeContext)
   return (
     <div className={`contact ${mode === 'light'? 'light-mode': ''}`}>
       <div className={`backdrop_img ${mode === 'light' ? 'light-mode' : ''}`}>

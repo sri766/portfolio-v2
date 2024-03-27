@@ -5,8 +5,12 @@ import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
-const Card = ({ mode, projects }) => {
+const Card = ({ projects }) => {
+  const {mode} = useContext(ThemeContext)
+
   const settings = {
     infinite: true,
     speed: 800,

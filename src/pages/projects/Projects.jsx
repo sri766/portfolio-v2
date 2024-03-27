@@ -2,9 +2,9 @@ import React from 'react'
 import  Card  from '../../components/card/Card'
 
 
-const Projects = ({mode,projects}) => {
+const Projects = ({projects}) => {
   return (
-    <Card projects={projects} mode={mode}/>
+    <Card projects={projects}/>
   )
 }
 

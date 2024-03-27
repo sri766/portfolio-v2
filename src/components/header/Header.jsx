@@ -9,9 +9,12 @@ import { MdDarkMode } from "react-icons/md";
 import { useNavigate } from 'react-router-dom'
 import { RxHamburgerMenu } from "react-icons/rx";
 import NavbarItems from './NavItems';
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
+const Header = () => {
 
-const Header = ({mode,toggleMode}) => {
+  const {mode,toggleMode} = useContext(ThemeContext)
   const [isToggled, setToggle] = useState(false);
   const [mobileView, setMobileView] = useState(false)
   const navigate = useNavigate()
@@ -107,8 +110,8 @@ const Header = ({mode,toggleMode}) => {
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             transition={{
+              duration: 1.3,
               ease: "easeInOut",
-              staggerChildren: 2
             }}
           className='content-list'>
             <li key='home'className='content' onClick={()=>navigate('/')}>Home</li>

@@ -1,9 +1,11 @@
 import React from 'react'
 import './style.scss'
 import { IoMdHeart } from "react-icons/io";
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
-
-const Footer = ({mode}) => {
+const Footer = () => {
+  const {mode} = useContext(ThemeContext)
   return (
     <div className={`footer ${mode === 'light' ? 'light-mode' : ''}`}>
       <p className='footer_contents'>Made with {<IoMdHeart />} by Srisanth Seth</p>

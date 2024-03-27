@@ -2,9 +2,11 @@ import React from 'react';
 import './style.scss';
 import { blog } from '../../components/data/Data';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
-
-const Blog = ({mode})=> {
+const Blog = ()=> {
+  const {mode} = useContext(ThemeContext)
   return (
     <section className={`blog-section ${mode === 'light' ? 'light-mode' : ''}`}>
       <div className="container">

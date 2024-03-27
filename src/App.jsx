@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from 'react'
 import { BrowserRouter,Route, Routes } from 'react-router-dom'
 import './components/header/navItems.scss'
+import { ThemeProvider } from './Context'
 //pages
 import Home from './pages/home/Home'
 import About from './pages/about/About'
@@ -15,25 +16,22 @@ import Footer from './components/footer/Footer'
 import { projects } from './components/data/Data'
 
 const App =() =>{
-  const [mode,setMode] = useState('dark');
-  
-  const toggleMode = () => {
-    setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
-  };
 
   return (
-    <BrowserRouter>
-      <Header mode={mode} toggleMode={toggleMode}/>
-      <Routes>
-        <Route path="/" element={<Home mode={mode} projects={projects}/>} />
-        <Route path="/about" element={<About mode={mode}/>} />
-        <Route path="/blog" element={<Blog mode={mode}/>} />
-        <Route path="/skills" element={<Skills mode={mode}/>} />
-        <Route path="/projects" element={<Projects mode={mode} projects={projects}/>} />
-        <Route path="/contact" element={<Contact mode={mode}/>} />
-      </Routes>
-      <Footer mode={mode}/>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Header/>
+        <Routes>
+          <Route path="/" element={<Home projects={projects}/>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/projects" element={<Projects  projects={projects}/>} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }
 

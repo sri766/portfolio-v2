@@ -1,8 +1,12 @@
 import React from 'react';
 import './style.scss';
 import { motion } from 'framer-motion';
+import { ThemeContext } from '../../Context';
+import { useContext } from 'react';
 
-const Skills = ({ mode }) => {
+const Skills = () => {
+
+  const {mode} = useContext(ThemeContext)
   
   const skills = [
     {name:'HTML',icon:'./assets/html.png'},
@@ -24,14 +28,17 @@ const Skills = ({ mode }) => {
 
   return (
     <div className={`skills_container ${mode === "light" ? "light-mode" : ""}`}>
-      <h1>Skills 🚀</h1>
+      <h1>SKILLS 🚀</h1>
       <div className='skill_items' >
         {skills.map((skill, index) => (
           <motion.div
             key={index}
+            initial={{opacity:0}}
+            animate={{opacity:1,y:-1}}
+            transition={{duration: 0.4, ease:'easeInOut'}}
             className='skill'
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1 }}
             drag
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
           >
